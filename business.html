@@ -1,0 +1,153 @@
+<!doctype html>
+<head>
+<title>Solar Businesses</title>
+<link rel="stylesheet" href="Business.css">         
+<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+</head> 
+<body>      
+  <center>   
+    <h1>Solar Businesses</h1>              
+
+<div class="topnav" id="myTopnav" style="text-align: center ;"> 
+    <a href="SmartSolar.html" style="color: white;" >Home</a>  
+    <a href="about.html" style="color: white;" >About Solar</a>
+    <a href="Business.html" style="color: white;" >Solar Business</a>
+    <a href="Map.html" style="color: white;" >Solar Map</a>
+    <a href="Contact.html"style="color: white;" >Contact Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+    
+    <div class="box">
+<div class="container">
+  <img src="http://slingshotsolar.wpengine.netdna-cdn.com/wp-content/uploads/2015/10/bigstock-Windows-Of-Modern-Office-Buil-90795959.jpg"
+       alt="Michigan State: Transparent Solar Cells" class="image" height="300px" width="300px" padding="20px">
+  <div class="overlay">
+    <div class="text">Overwhelmed by all the solar business out there? <br>
+      Here are some right here <br>
+      for you to research! <br> 
+     Picture credit to slingshotpower.com.</div>
+  </div>
+</div>
+     </div>
+    
+    <h2 style="text-align:center">Our Top Picks</h2>   
+   
+    <div class="box">
+<div class="row"> 
+  <div class="column"> 
+    <img src="https://images.bestcompany.com/wp-content/uploads/sites/31/2014/08/25082702/solar-spectrum2.jpg"
+         style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://c1cleantechnicacom-wpengine.netdna-ssl.com/files/2014/09/Dividend-Solar.png" 
+         style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://solarthermalmagazine.com/wp-content/uploads/2015/06/Solar-Energy-Company-SunPower.png" 
+         style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://media.consumeraffairs.com/files/cache/logos/sunrun_logo_10610_widget_logo.png" 
+         style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://images.bestcompany.com/wp-content/uploads/sites/31/2014/08/25082702/solar-spectrum2.jpg"
+           style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://c1cleantechnicacom-wpengine.netdna-ssl.com/files/2014/09/Dividend-Solar.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://solarthermalmagazine.com/wp-content/uploads/2015/06/Solar-Energy-Company-SunPower.png"
+           style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://media.consumeraffairs.com/files/cache/logos/sunrun_logo_10610_widget_logo.png" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="https://images.bestcompany.com/wp-content/uploads/sites/31/2014/08/25082702/solar-spectrum2.jpg" 
+           style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://c1cleantechnicacom-wpengine.netdna-ssl.com/files/2014/09/Dividend-Solar.png" 
+           style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://solarthermalmagazine.com/wp-content/uploads/2015/06/Solar-Energy-Company-SunPower.png" 
+           style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media.consumeraffairs.com/files/cache/logos/sunrun_logo_10610_widget_logo.png" 
+           style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+    </div>
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<div class="topnav" id="myTopnav" style="text-align: center ;"> 
+    <a href="SmartSolar.html" style="color: white;" >Home</a>  
+    <a href="about.html" style="color: white;" >About Solar</a>
+    <a href="Business.html" style="color: white;" >Solar Business</a>
+    <a href="Map.html" style="color: white;" >Solar Map</a>
+    <a href="Contact.html"style="color: white;" >Contact Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>   
+  </center> 
+</body>
+</html>
