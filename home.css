@@ -24,6 +24,12 @@ h2 {
   width: 50%; 
 }
 
+.image {
+  display: block;
+  width: auto;  
+  height: auto; 
+}
+
 .overlay {
   position: absolute;
   bottom: 0; 
