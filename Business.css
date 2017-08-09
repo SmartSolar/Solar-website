@@ -5,6 +5,10 @@ body {
   padding: 90px;
   margin: 0;
 }    
+
+p {
+ padding: 20px ;  
+}
    
 * { 
   box-sizing: border-box;
