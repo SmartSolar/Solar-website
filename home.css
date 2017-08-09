@@ -4,7 +4,7 @@ body {
   font-family: courier;    
   padding: 90px; 
 }        
-      
+        
 h1 {                   
   border-bottom: solid;        
   border-bottom-color: DodgerBlue ;   
@@ -26,7 +26,7 @@ h2 {
  
 .image {
   display: block;
-  width: 50%;  
+  width: 100%;  
   height: auto; 
 }
 
@@ -49,7 +49,7 @@ h2 {
 }
 
 .container:hover .overlay {
-  width: 100%;
+  width: 80%;
   left: 0;
 }
 
