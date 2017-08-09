@@ -1,5 +1,19 @@
  <!DOCTYPE html>
 <style>
+ div.transbox {
+  margin: 30px;
+  background-color: #E4FAEF;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+ 
 img {
     opacity: 1;
     filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -59,10 +73,16 @@ img {
 
 
  
-  <center>
+ <div class="background">
+  <div class="transbox">
+ <center>
   <h3>  <b>Summary of the Map</b> </h3>
   <p> <b>This map shows the location of solar stores in NYC.</b> </p>
   </center>
+  </div>
+</div>
+ 
+ 
   <div class="topnav" id="myTopnav">
 
     <a href="SmartSolar.html" style="color: white;" >Home</a>
