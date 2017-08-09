@@ -146,6 +146,7 @@ h1 {
   border-bottom-color: DodgerBlue ;   
   background-color: LightGray ;   
   opacity: .8 ;    
+  text-shadow: 3px 3px #E4FAEF;
 }  
 
 h2 { 
