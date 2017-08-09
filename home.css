@@ -49,7 +49,6 @@ h2 {
 }
 
 .container:hover .overlay {
-  width: 80%;
   left: 0;
 }
 
