@@ -1,0 +1,53 @@
+body {
+  background-image: url("http://static5.businessinsider.com/image/575afb9edd0895043d8b4a69/heres-how-much-of-the-world-would-need-to-be-covered-in-solar-panels-to-power-earth.jpg"); 
+  font-size: 200%; 
+  font-family: courier;    
+  padding: 90px; 
+}        
+            
+h1 {                         
+  border-bottom: solid;             
+  border-bottom-color: DodgerBlue ;          
+  background-color: LightGray ;           
+  opacity: .8 ;         
+}      
+    
+h2 {     
+  border-bottom: solid;     
+  border-bottom-color: DodgerBlue ; 
+  background-color: LightGray ;
+  opacity: .8 ;  
+}
+
+.box {
+  background-color: LightSteelBlue  ;
+  opacity: .8 ; 
+}
+
+.topnav {
+   background-color: #333;
+   opacity: .7 ;
+   overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+   float: left;
+   display: block; 
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+   background-color: #ddd;
+   color: black;
+   }
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
