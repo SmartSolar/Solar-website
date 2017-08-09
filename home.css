@@ -5,7 +5,7 @@ body {
   padding: 90px; 
 }        
                   
-h1 {                         
+h1 {                           
   border-bottom: solid;             
   border-bottom-color: DodgerBlue ;          
   background-color: LightGray ;              
@@ -24,7 +24,7 @@ h2 {
   opacity: .9 ; 
 }
 
-img  {
+.image  {
  opacity: 1 ;  
   padding: 20px ; 
 }
