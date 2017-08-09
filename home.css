@@ -24,11 +24,6 @@ h2 {
   opacity: .9 ; 
 }
 
-.image  {
-  opacity: 1 ;  
-  padding: 20px ; 
-}
-
 #last {
   padding: 20px ; 
 }
@@ -41,7 +36,9 @@ h2 {
 .image {
   display: block;
   width: 90%;
-  height: 90%;
+  height: 80%;
+  opacity: 1 ;  
+  padding: 20px ; 
 }
 
 .overlay {
