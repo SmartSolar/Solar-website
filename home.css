@@ -19,6 +19,11 @@ h2 {
   opacity: .8 ;  
 }
 
+.box {
+  background-color: DodgerBlue ;
+  opacity: .8 ; 
+}
+
 .container {
   position: relative;
   width: 50%;
