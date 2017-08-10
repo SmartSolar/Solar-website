@@ -602,7 +602,7 @@ function mkOv(left, top, width, height)
 			st += bb*((x<<1)+3);
 			tt += (bb<<1)*(++x);
 		}
-		else if (tt < 0)
+		else if (tt < 0)   
 		{
 			st += bb*((x<<1)+3) - (aa<<1)*(y-1);
 			tt += (bb<<1)*(++x) - aa*(((y--)<<1)-3);
