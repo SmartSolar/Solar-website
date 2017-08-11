@@ -1,48 +1,49 @@
-<!DOCTYPE HTML>
-<html>
-<head>  
-  <script type="text/javascript">
-  window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
-    {  
-      title:{  
-        text: "Payback Period Over 40 Years"       
-      },
-      axisX:{
-        interlacedColor: "#F0F8FF" 
-      },
-       axisX:{
-  title : "Primary X Axis"
- },
-       axisY:{
-  title : "Primary Y Axis"
- },
-      data: [
-     
-        {        
-        type: "line",
-        dataPoints: [
-        { x: 0, y: 2500 },
-        { x: 5, y: 5000},
-        { x: 10, y: 7500 },
-        { x: 15, y: 10000 },
-        { x: 20, y: 12500 },
-        { x: 25, y: 15000 },
-        { x: 30, y: 17500 },
-        { x: 35, y: 20000 },
-        { x: 40, y: 22500}
-        ]
-      }
-      ]
-    });
+<!doctype html>
+<head>
+<title>Solar Businesses</title>
+<link rel="stylesheet" href="Business.css">               
+<meta name="viewport" content="width=device-width,initial-scale=1.0">             
+  <script type="text/javascript">             
+window.onload = function () {    
+    var chart = new CanvasJS.Chart("chartContainer");         
+    chart.options.axisY = { prefix: "$", suffix: "K" };  
+    chart.options.title = { text: "Payback Period over 20 years" };    
+  
+    var series1 = { //dataSeries - Natural Gas        
+        type: "column",
+        name: "Natural Gas",
+        showInLegend: true
+    };
+    var series2 = { //dataSeries - Solar Panel
+        type: "column",
+        name: "Solar Panel",
+        showInLegend: true
+    };
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);  
 
+    series1.dataPoints = [
+        { label: "0", y: 1296 },
+        { label: "5", y: 6480 },
+        { label: "10", y: 12960 },
+        { label: "15", y: 19440 },
+        { label: "20", y: 25920 },
+    ];
+    series2.dataPoints = [
+        { label: "0", y: 9000 },
+        { label: "5", y: 10620 },   
+        { label: "10", y: 12240 },
+        { label: "15", y: 13860 },
+        { label: "20", y: 15480 },
+    ];
     chart.render();
-  }
-  </script>
-  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</head>
-<body>
-  <div id="chartContainer" style="height: 300px; width: 100%;">
-  </div>
+}
+  </script> 
+</head>     
+<body> 
+   <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
+  
+  
 </body>
 </html>
