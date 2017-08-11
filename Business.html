@@ -39,46 +39,6 @@ window.onload = function () {
     chart.render();
 }
   </script> 
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  
-  <script type="text/javascript">
-  window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
-    {
-      title:{
-      text: "Multi-Series Line Chart"  
-      },
-      data: [
-      {        
-        type: "line",
-        dataPoints: [
-        { x: 0, y: 1926 },
-        { x: 5, y: 6480},
-        { x: 10, y: 12960 },
-        { x: 15, y: 19440 },
-        { x: 20, y: 25920 }
-      
-        ]
-      },
-        
-        {        
-        type: "line",
-        dataPoints: [
-        { x: 0, y: 9000 },
-        { x: 5, y: 10620},
-        { x: 10, y: 12240 },
-        { x: 15, y: 13860 },
-        { x: 20, y: 15480 },
-      
-        ]
-      }
-      ]
-    });
-
-    chart.render();
-  }
-  </script>
- <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>    
 <body>                 
   <center>                          
@@ -281,6 +241,46 @@ function showSlides(n) {
       Its best to contact solar companies <br>
       to fully understand your financial <br>
       benefits. </p>
+      <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+      text: "Multi-Series Line Chart"  
+      },
+      data: [
+      {        
+        type: "line",
+        dataPoints: [
+        { x: 0, y: 1926 },
+        { x: 5, y: 6480},
+        { x: 10, y: 12960 },
+        { x: 15, y: 19440 },
+        { x: 20, y: 25920 }
+      
+        ]
+      },
+        
+        {        
+        type: "line",
+        dataPoints: [
+        { x: 0, y: 9000 },
+        { x: 5, y: 10620},
+        { x: 10, y: 12240 },
+        { x: 15, y: 13860 },
+        { x: 20, y: 15480 },
+      
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <div id="chartContainer" style="height: 300px; width: 100%;">
   </div>
     </div>
