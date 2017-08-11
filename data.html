@@ -4,9 +4,9 @@
 <script type="text/javascript">
 window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer");
-  
+
     chart.options.axisY = { prefix: "$", suffix: "K" };
-    chart.options.title = { text: "Fruits sold in First & Second Quarter" };
+    chart.options.title = { text: "Natural Gas vs. Solar Panel costs" };
 
     var series1 = { //dataSeries - Natural Gas
         type: "column",
@@ -24,30 +24,28 @@ window.onload = function () {
     chart.options.data.push(series1);
     chart.options.data.push(series2);
 
-
     series1.dataPoints = [
-            { label: "1", y: 18 },
-            { label: "5", y: 29 },
-            { label: "10", y: 40 },
-            { label: "15", y: 34 },
-            { label: "20", y: 24 },
-      { label: "25", y: 20 },
-      { label: "30", y: 20 },
-      { label: "35", y: 20 },
-      { label: "40", y: 20 },
+            { label: "0", y: 2500 },
+            { label: "5", y: 5000 },
+            { label: "10", y: 7500 },
+            { label: "15", y: 10000 },
+            { label: "20", y: 12500 },
+      		{ label: "25", y: 15000 },
+      		{ label: "30", y: 17500 },
+      		{ label: "35", y: 20000 },
+      		{ label: "40", y: 22500 },
     ];
 
     series2.dataPoints = [
-        { label: "1", y: 23 },
-        { label: "5", y: 33 },
-        { label: "10", y: 48 },
-        { label: "15", y: 37 },
-        { label: "20", y: 20 },
-      { label: "25", y: 20 },
-      { label: "25", y: 20 },
-      { label: "25", y: 20 },
-      { label: "25", y: 20 },
-      
+        { label: "0", y: 16326 },
+        { label: "5", y: 17076 },
+        { label: "10", y: 17826 },
+        { label: "15", y: 18576 },
+        { label: "20", y: 19326 },
+      	{ label: "25", y: 20076 },
+     	{ label: "30", y: 20826 },
+     	{ label: "35", y: 21576 },
+      	{ label: "40", y: 22326 },
     ];
 
     chart.render();
@@ -55,7 +53,6 @@ window.onload = function () {
 </script>
 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
-
 <body>
     <div id="chartContainer" style="height: 300px; width: 100%;">
     </div>
