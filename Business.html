@@ -3,6 +3,56 @@
 <title>Solar Businesses</title>
 <link rel="stylesheet" href="Business.css">             
 <meta name="viewport" content="width=device-width,initial-scale=1.0">     
+  <script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer");
+
+    chart.options.axisY = { prefix: "$", suffix: "K" };
+    chart.options.title = { text: "Natural Gas vs. Solar Panel costs" };
+
+    var series1 = { //dataSeries - Natural Gas
+        type: "column",
+        name: "Natural Gas",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - Solar Panel
+        type: "column",
+        name: "Solar Panel",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [
+            { label: "0", y: 2500 },
+            { label: "5", y: 5000 },
+            { label: "10", y: 7500 },
+            { label: "15", y: 10000 },
+            { label: "20", y: 12500 },
+      		{ label: "25", y: 15000 },
+      		{ label: "30", y: 17500 },
+      		{ label: "35", y: 20000 },
+      		{ label: "40", y: 22500 },
+    ];
+    series2.dataPoints = [
+        { label: "0", y: 16326 },
+        { label: "5", y: 17076 },
+        { label: "10", y: 17826 },
+        { label: "15", y: 18576 },
+        { label: "20", y: 19326 },
+      	{ label: "25", y: 20076 },
+     	{ label: "30", y: 20826 },
+     	{ label: "35", y: 21576 },
+      	{ label: "40", y: 22326 },
+    ];
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>    
 <body>                 
   <center>                          
@@ -189,6 +239,11 @@ function showSlides(n) {
   <p>They have a user score of 9.4.  <br>
   They are also located in New York. <br>
     You can find out more <a href="https://www.sunationsolarsystems.com/"> here.</a> </p>
+    </div>
+    
+    <div class="box">
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
     </div>
     
 <div class="topnav" id="myTopnav" style="text-align: center ;"> 
