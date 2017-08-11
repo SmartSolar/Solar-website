@@ -6,26 +6,21 @@
   <script type="text/javascript">
 window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer");
-
     chart.options.axisY = { prefix: "$", suffix: "K" };
     chart.options.title = { text: "Natural Gas vs. Solar Panel costs" };
-
     var series1 = { //dataSeries - Natural Gas
         type: "column",
         name: "Natural Gas",
         showInLegend: true
     };
-
     var series2 = { //dataSeries - Solar Panel
         type: "column",
         name: "Solar Panel",
         showInLegend: true
     };
-
     chart.options.data = [];
     chart.options.data.push(series1);
     chart.options.data.push(series2);
-
 
     series1.dataPoints = [
             { label: "0", y: 2500 },
