@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Payback Period Over 40 Years"      
+      },
+      axisX:{
+        interlacedColor: "#F0F8FF" 
+      },
+      data: [
+     
+        {        
+        type: "line",
+        dataPoints: [
+        { x: 0, y: 2500 },
+        { x: 5, y: 5000},
+        { x: 10, y: 7500 },
+        { x: 15, y: 10000 },
+        { x: 20, y: 12500 },
+        { x: 25, y: 15000 },
+        { x: 30, y: 17500 },
+        { x: 35, y: 20000 },
+        { x: 40, y: 22500}
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>
