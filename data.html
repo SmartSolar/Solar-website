@@ -1,173 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 <head>
-<title>
-</title> 
-    <script type="text/javascript">
-	window.onload = function () {  
-		var chart = new CanvasJS.Chart("chartContainer",   
-		{    
-			zoomEnabled: false,     
-                        animationEnabled: true,      
-			title:{
-				text: "Solar Panel and Natural Gas Prices over 40 Years"
-			},
-			axisY2:{
-				valueFormatString:"0.0 ",
-				maximum: 30,
-				interval: 5,
-				interlacedColor: "#F5F5F5",
-				gridColor: "#D7D7D7",      
-	 			tickColor: "#D7D7D7"								
-			},
-                        theme: "theme2",
-                        toolTip:{
-                                shared: true
-                        },
-			legend:{
-				verticalAlign: "bottom",
-				horizontalAlign: "center",
-				fontSize: 15,
-				fontFamily: "Lucida Sans Unicode"
-			},
-			data: [
-			{        
-				type: "line",  
-				lineThickness:3,
-				axisYType:"secondary",   
-				showInLegend: true,           
-				name: "Solar Panels", 
-				dataPoints: [
-				{ x: (1, 0), y: 16,426 },
-				{ x: (5, 0), y: 17,176 },
-				{ x: (10, 0), y: 17,926},
-				{ x: (15, 0), y: 18,676 },
-				{ x: (20, 0), y: 19,426 },
-				{ x: (25, 0), y: 20,176 },
-				{ x: (30, 0), y: 20,926 },
-				{ x: (35, 0), y: 21,676 },
-				{ x: (40, 0), y: 22,426 }
-				]
-			},
-			{        
-				type: "line",
-				lineThickness:3,
-				showInLegend: true,           
-				name: "Natural Gas",
-				axisYType:"secondary",
-				dataPoints: [
-				{ x: (1, 00), y: 2500 },
-				{ x: (5, 00), y: 5000 },
-				{ x: (10, 0), y: 7500 },
-				{ x: (15, 0), y: 10000 },
-				{ x: (20, 0), y: 12500 },
-				{ x: (25, 0), y: 15000 },
-				{ x: (30, 0), y: 17500 },
-				{ x: (35, 0), y: 20000  },
-				{ x: (40, 0), y: 22500 }
-				]
-			},
-			],
-          legend: {
-            cursor:"pointer",
-            itemclick : function(e) {
-              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-              e.dataSeries.visible = false;
-              }
-              else {
-                e.dataSeries.visible = true;
-              }
-              chart.render();
-            }
-          }
-        });
-chart.render();
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer");
+
+    chart.options.axisY = { prefix: "$", suffix: "K" };
+    chart.options.title = { text: "Fruits sold in First & Second Quarter" };
+
+    var series1 = { //dataSeries - Natural Gas
+        type: "column",
+        name: "Natural Gas",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - Solar Panel
+        type: "column",
+        name: "Solar Panel",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [
+            { label: "1", y: 18 },
+            { label: "5", y: 29 },
+            { label: "10", y: 40 },
+            { label: "15", y: 34 },
+            { label: "20", y: 24 },
+      { label: "25", y: 20 },
+      { label: "30", y: 20 },
+      { label: "35", y: 20 },
+      { label: "40", y: 20 },
+    ];
+
+    series2.dataPoints = [
+        { label: "1", y: 23 },
+        { label: "5", y: 33 },
+        { label: "10", y: 48 },
+        { label: "15", y: 37 },
+        { label: "20", y: 20 },
+      { label: "25", y: 20 },
+      { label: "25", y: 20 },
+      { label: "25", y: 20 },
+      { label: "25", y: 20 },
+      
+    ];
+
+    chart.render();
 }
 </script>
-  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
+
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;">
-	<script type="text/javascript">
-	window.onload = function () {  
-		var chart = new CanvasJS.Chart("chartContainer",
-		{    
-			zoomEnabled: false,     
-                        animationEnabled: true,      
-			title:{
-				text: "Solar Panel and Natural Gas Prices over 40 Years"
-			},
-			axisY2:{
-				valueFormatString:"0.0 ",
-				maximum: 30,
-				interval: 5,
-				interlacedColor: "#F5F5F5",
-				gridColor: "#D7D7D7",      
-	 			tickColor: "#D7D7D7"								
-			},
-                        theme: "theme2",
-                        toolTip:{
-                                shared: true
-                        },
-			legend:{
-				verticalAlign: "bottom",
-				horizontalAlign: "center",
-				fontSize: 15,
-				fontFamily: "Lucida Sans Unicode"
-			},
-			data: [
-			{        
-				type: "line",  
-				lineThickness:3,
-				axisYType:"secondary",   
-				showInLegend: true,           
-				name: "Solar Panels", 
-				dataPoints: [
-				{ x: (1, 0), y: 16,426 },
-				{ x: (5, 0), y: 17,176 },
-				{ x: (10, 0), y: 17,926},
-				{ x: (15, 0), y: 18,676 },
-				{ x: (20, 0), y: 19,426 },
-				{ x: (25, 0), y: 20,176 },
-				{ x: (30, 0), y: 20,926 },
-				{ x: (35, 0), y: 21,676 },
-				{ x: (40, 0), y: 22,426 }
-				]
-			},
-			{        
-				type: "line",
-				lineThickness:3,
-				showInLegend: true,           
-				name: "Natural Gas",
-				axisYType:"secondary",
-				dataPoints: [
-				{ x: (1, 00), y: 2500 },
-				{ x: (5, 00), y: 5000 },
-				{ x: (10, 0), y: 7500 },
-				{ x: (15, 0), y: 10000 },
-				{ x: (20, 0), y: 12500 },
-				{ x: (25, 0), y: 15000 },
-				{ x: (30, 0), y: 17500 },
-				{ x: (35, 0), y: 20000  },
-				{ x: (40, 0), y: 22500 }
-				]
-			},
-			],
-          legend: {
-            cursor:"pointer",
-            itemclick : function(e) {
-              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-              e.dataSeries.visible = false;
-              }
-              else {
-                e.dataSeries.visible = true;
-              }
-              chart.render();
-            }
-          }
-        });
-chart.render();
-}
-</script>
-	</div>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
 </body>
-</html>  
+</html>
