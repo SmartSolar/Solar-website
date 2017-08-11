@@ -87,6 +87,87 @@ chart.render();
 </head>
 <body>
 <div id="chartContainer" style="height: 300px; width: 100%;">
+	<script type="text/javascript">
+	window.onload = function () {  
+		var chart = new CanvasJS.Chart("chartContainer",
+		{    
+			zoomEnabled: false,     
+                        animationEnabled: true,      
+			title:{
+				text: "Solar Panel and Natural Gas Prices over 40 Years"
+			},
+			axisY2:{
+				valueFormatString:"0.0 ",
+				maximum: 30,
+				interval: 5,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"								
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 15,
+				fontFamily: "Lucida Sans Unicode"
+			},
+			data: [
+			{        
+				type: "line",  
+				lineThickness:3,
+				axisYType:"secondary",   
+				showInLegend: true,           
+				name: "Solar Panels", 
+				dataPoints: [
+				{ x: (1, 0), y: 16,426 },
+				{ x: (5, 0), y: 17,176 },
+				{ x: (10, 0), y: 17,926},
+				{ x: (15, 0), y: 18,676 },
+				{ x: (20, 0), y: 19,426 },
+				{ x: (25, 0), y: 20,176 },
+				{ x: (30, 0), y: 20,926 },
+				{ x: (35, 0), y: 21,676 },
+				{ x: (40, 0), y: 22,426 }
+				]
+			},
+			{        
+				type: "line",
+				lineThickness:3,
+				showInLegend: true,           
+				name: "Natural Gas",
+				axisYType:"secondary",
+				dataPoints: [
+				{ x: (1, 00), y: 2500 },
+				{ x: (5, 00), y: 5000 },
+				{ x: (10, 0), y: 7500 },
+				{ x: (15, 0), y: 10000 },
+				{ x: (20, 0), y: 12500 },
+				{ x: (25, 0), y: 15000 },
+				{ x: (30, 0), y: 17500 },
+				{ x: (35, 0), y: 20000  },
+				{ x: (40, 0), y: 22500 }
+				]
+			},
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });
+chart.render();
+}
+</script>
 	</div>
 </body>
 </html>  
