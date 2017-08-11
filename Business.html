@@ -5,15 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">             
   <script type="text/javascript">             
 window.onload = function () {    
-    var chart = new CanvasJS.Chart("chartContainer");         
+    var chart = new CanvasJS.Chart("chartContainer"); 
     chart.options.axisY = { prefix: "$", suffix: "K" };  
-    chart.options.title = { text: "Payback Period over 20 years" };   
-   axisX:{
-  title : "Years"
- },
-       axisY:{
-  title : "Money"
- },
+    chart.options.title = { text: "Payback Period over 20 years" 
+  axisX:{ title : "Years" },
+  axisY:{ title : "Money"},};   
   
     var series1 = { //dataSeries - Natural Gas        
         type: "column",
